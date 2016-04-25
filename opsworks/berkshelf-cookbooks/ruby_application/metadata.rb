@@ -1,0 +1,11 @@
+name             "ruby_application"
+maintainer       "ESPN Brazil"
+maintainer_email "brazil@espn.com"
+description      "Generic Ruby recipes"
+long_description "Generic Ruby recipes"
+version          "0.1.1"
+
+depends          "apt"
+depends          "build-essential"
+depends          "nginx"
+depends          "swap"

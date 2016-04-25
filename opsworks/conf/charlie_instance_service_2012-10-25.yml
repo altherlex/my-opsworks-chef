@@ -1,0 +1,32 @@
+---
+:json_version: '1.1'
+:target_prefix: CharlieInstanceService.
+:api_version: '2012-10-25'
+:operations:
+- :name: GetCommand
+  :method: :get_command
+  :inputs: {}
+  :outputs:
+    Command:
+      :type: :string
+- :name: ReportCommandExecution
+  :method: :report_command_execution
+  :inputs:
+    CommandExecutionReport:
+    - :string
+    - :required
+  :outputs: {}
+- :name: ReportKeepAlive
+  :method: :report_keep_alive
+  :inputs:
+    KeepAliveReport:
+    - :string
+    - :required
+  :outputs: {}
+- :name: ReportStatistics
+  :method: :report_statistics
+  :inputs:
+    StatisticsReport:
+    - :string
+    - :required
+  :outputs: {}

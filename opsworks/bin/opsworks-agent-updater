@@ -1,0 +1,11 @@
+#!/opt/aws/opsworks/local/bin/ruby
+
+ENV["NSS_SDB_USE_CACHE"] = "YES"
+
+require 'pathname'
+$:.unshift("#{Pathname.new(__FILE__).realpath.dirname}/../lib")
+require 'proxy_support'
+require 'bootstrap'
+require 'bootstrap/instance_agent_updater'
+
+Bootstrap::InstanceAgentUpdater.run  if __FILE__ == $0

@@ -1,0 +1,8 @@
+--- 
+:program_name: opsworks-agent
+:root_dir: /opt/aws/opsworks
+:log_dir: /var/log/aws/opsworks
+:shared_dir: /var/lib/aws/opsworks
+:user: aws
+:group: aws
+:verbose: true

@@ -1,0 +1,21 @@
+# encoding: UTF-8
+module InstanceAgent
+  RNADecodingFailure = Class.new(Exception)
+  RNAEncryptedDataVerificationFailure = Class.new(Exception)
+  RNAEncryptedDataDecryptionFailure = Class.new(Exception)
+  RNAEncryptedDataDecodingFailure = Class.new(Exception)
+  RNAAttributeMissing = Class.new(Exception)
+  RNACommandExpirationFailure = Class.new(Exception)
+  RNACommandDuplicationFailure = Class.new(Exception)
+  DNADownloadingFailure = Class.new(Exception)
+  DNADecodingFailure = Class.new(Exception)
+  DNAEncryptedDataVerificationFailure = Class.new(Exception)
+  DNAIVVerificationFailure = Class.new(Exception)
+  DNAIVSignatureMissingFailure = Class.new(Exception)
+  DNAEncryptedDataDecryptionFailure = Class.new(Exception)
+  CleanupExecutedCommandIdsFailure = Class.new(Exception)
+  CommandStoringFailure = Class.new(Exception)
+  CommandExecutionFailure = Class.new(Exception)
+  LogUploadingFailure = Class.new(Exception)
+  MarkSetupAsDoneFailure = Class.new(Exception)
+end

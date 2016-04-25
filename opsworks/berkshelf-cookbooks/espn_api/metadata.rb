@@ -1,0 +1,11 @@
+name             "espn_api"
+maintainer       "ESPN Brazil"
+maintainer_email "brazil@espn.com"
+description      "API recipes"
+long_description "API recipes"
+version          "0.0.1"
+
+depends          "apt"
+depends          "build-essential"
+depends          "nginx"
+depends          "swap"

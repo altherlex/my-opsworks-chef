@@ -1,0 +1,1 @@
+InstanceAgent::Log = ProcessManager::Log

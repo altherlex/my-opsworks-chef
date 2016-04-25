@@ -1,0 +1,11 @@
+name             "espn_sync"
+maintainer       "ESPN Brazil"
+maintainer_email "brazil@espn.com"
+description      "Sync recipes"
+long_description "Sync recipes"
+version          "0.0.1"
+
+depends          "apt"
+depends          "build-essential"
+depends          "nginx"
+depends          "swap"

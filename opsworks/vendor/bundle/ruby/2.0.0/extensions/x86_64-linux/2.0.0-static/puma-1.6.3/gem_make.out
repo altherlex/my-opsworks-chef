@@ -1,0 +1,16 @@
+/opt/aws/opsworks/local/bin/ruby extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling http11_parser.c
+In file included from ext/http11/http11_parser.rl:7:0:
+ext/http11/http11_parser.rl: In function 'http_parser_execute':
+ext/http11/http11_parser.rl:111:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20151207-21725-1pn5z5a/puma
+installing default puma_http11 libraries

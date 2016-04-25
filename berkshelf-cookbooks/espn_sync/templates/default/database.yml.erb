@@ -1,0 +1,8 @@
+<%= @rails_env %>:
+  adapter: <%= @database[:type] %>
+  database: <%= @database[:database] %>
+  username: <%= @database[:username] %>
+  password: <%= @database[:password] %>
+  host: <%= @database[:host] %>
+  port: <%= @database[:port] %>
+  pool: 100

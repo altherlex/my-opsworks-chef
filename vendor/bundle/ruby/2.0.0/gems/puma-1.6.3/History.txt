@@ -1,0 +1,135 @@
+=== 1.6.3 / 2012-09-04
+
+* 1 bug fix:
+  * Close sockets waiting in the reactor when a hot restart is performed
+    so that browsers reconnect on the next request
+
+=== 1.6.2 / 2012-08-27
+
+* 1 bug fix:
+  * Rescue StandardError instead of IOError to handle SystemCallErrors
+    as well as other application exceptions inside the reactor.
+
+=== 1.6.1 / 2012-07-23
+
+* 1 packaging bug fixed:
+  * Include missing files
+
+=== 1.6.0 / 2012-07-23
+
+* 1 major bug fix:
+  * Prevent slow clients from starving the server by introducing a
+    dedicated IO reactor thread. Credit for reporting goes to @meh.
+
+=== 1.5.0 / 2012-07-19
+
+* 7 contributers to this release:
+  * Christian Mayer
+  * Darío Javier Cravero
+  * Dirkjan Bussink
+  * Gianluca Padovani
+  * Santiago Pastorino
+  * Thibault Jouan
+  * tomykaira
+
+* 6 bug fixes:
+  * Define RSTRING_NOT_MODIFIED for Rubinius
+  * Convert status to integer. Fixes #123
+  * Delete pidfile when stopping the server
+  * Allow compilation with -Werror=format-security option
+  * Fix wrong HTTP version for a HTTP/1.0 request
+  * Use String#bytesize instead of String#length
+
+* 3 minor features:
+  * Added support for setting RACK_ENV via the CLI, config file, and rack app
+  * Allow Server#run to run sync. Fixes #111
+  * Puma can now run on windows
+
+=== 1.4.0 / 2012-06-04
+
+* 1 bug fix:
+  * SCRIPT_NAME should be passed from env to allow mounting apps
+
+* 1 experimental feature:
+  * Add puma.socket key for direct socket access
+
+=== 1.3.1 / 2012-05-15
+
+* 2 bug fixes:
+  * use #bytesize instead of #length for Content-Length header
+  * Use StringIO properly. Fixes #98
+
+=== 1.3.0 / 2012-05-08
+
+* 2 minor features:
+  * Return valid Rack responses (passes Lint) from status server
+  * Add -I option to specify $LOAD_PATH directories
+
+* 4 bug fixes:
+  * Don't join the server thread inside the signal handle. Fixes #94
+  * Make NullIO#read mimic IO#read
+  * Only stop the status server if it's started. Fixes #84
+  * Set RACK_ENV early in cli also. Fixes #78
+
+* 1 new contributer:
+  * Jesse Cooke
+
+=== 1.2.2 / 2012-04-28
+
+* 4 bug fixes:
+
+  * Report a lowlevel error to stderr
+  * Set a fallback SERVER_NAME and SERVER_PORT
+  * Keep the encoding of the body correct. Fixes #79
+  * show error.to_s along with backtrace for low-level error
+
+=== 1.2.1 / 2012-04-11
+
+ 1 bug fix:
+
+   * Fix rack.url_scheme for SSL servers. Fixes #65
+
+=== 1.2.0 / 2012-04-11
+
+ 1 major feature:
+
+   * When possible, the internal restart does a "hot restart" meaning
+     the server sockets remains open, so no connections are lost.
+
+ 1 minor feature:
+
+    * More helpful fallback error message
+
+ 6 bug fixes:
+
+    * Pass the proper args to unknown_error. Fixes #54, #58
+    * Stop the control server before restarting. Fixes #61
+    * Fix reporting https only on a true SSL connection
+    * Set the default content type to 'text/plain'. Fixes #63
+    * Use REUSEADDR. Fixes #60
+    * Shutdown gracefull on SIGTERM. Fixes #53
+
+ 2 new contributers:
+
+   * Seamus Abshere
+   * Steve Richert
+
+=== 1.1.1 / 2012-03-30
+
+ 1 bugfix:
+
+   * Include puma/compat.rb in the gem (oops!)
+
+=== 1.1.0 / 2012-03-30
+
+ 1 bugfix:
+
+   * Make sure that the unix socket has the perms 0777 by default
+
+ 1 minor feature:
+
+   * Add umask param to the unix:// bind to set the umask
+
+=== 1.0.0 / 2012-03-29
+
+* Released!

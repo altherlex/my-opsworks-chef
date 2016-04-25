@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+real_path="$(dirname "$(readlink -f "$0")")"
+exec "${real_path}/installer_wrapper.sh" "$@"
